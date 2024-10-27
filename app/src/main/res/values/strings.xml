@@ -15,7 +15,7 @@
 
     // alon
     <string name="youtube_logo">youTube</string>
-    <string name="like_button_desc" >like</string>
+    <string name="like_button_desc">like</string>
     <string name="share">share</string>
     <string name="post">post</string>
     <string name="add_a_comment">Add a comment</string>
@@ -23,11 +23,11 @@
     <string name="sign_in">sign in</string>
     <string name="rewind">rewind</string>
     <string name="pause_play">pause/play</string>
-    <string name="description">Description:</string>
-    <string name="title">Title</string>
-    <string name="author">author:</string>
-    <string name="likes">likes:</string>
-    <string name="views">views:</string>
+    <string name="description">Description: </string>
+    <string name="title">Title: </string>
+    <string name="author">author: </string>
+    <string name="likes">likes: </string>
+    <string name="views">views: </string>
     <string name="forward">forward</string>
     <string name="fullscreen">fullscreen</string>
     <string name="title_video">Title video</string>
@@ -51,5 +51,7 @@
     <string name="username_menu">Username</string>
     <string name="profile">prooooooooooooooo</string>
     <string name="check">check</string>
+    <string name="BaseUrl">http://10.0.2.2:80/api/</string>
+    <string name="welcome">Yo, yo, yo! Welcome to my crib on the web, where the beats are fresh and the vibes are always fly.</string>
 
 </resources>

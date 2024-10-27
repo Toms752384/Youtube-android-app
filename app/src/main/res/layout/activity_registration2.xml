@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/android:colorBackground"
-    tools:context=".RegistrationPage.RegistrationActivity2">
+    tools:context=".view.ui.RegistrationActivity2">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -4,7 +4,7 @@
     <color name="black">#000000</color>
     <color name="light_background">#FFFFFF</color>
     <color name="dark_background">#1A1A1A</color>
-    <color name="darker_gray">#221F1F</color>
+    <color name="darker_gray">#D0323232</color>
     <color name="editTextBackground">#333333</color>
     <color name="editTextBorder">#B0B0B0</color>
     <color name="background_color">#1A1A1A</color>

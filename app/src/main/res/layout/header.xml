@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:layout_marginTop="20dp"
     android:layout_marginBottom="8dp"
-    android:contentDescription="Profile Image"
+    android:contentDescription="@string/profile"
     android:src="@drawable/profile_pic"
     android:scaleType="centerCrop"
     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerFamily.Circular"

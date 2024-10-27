@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.ProfileActivity">
+
+    <!-- Main content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/android:colorBackground"
+        android:orientation="vertical">
+
+        <!-- Toolbar with custom layout -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/android:colorBackground"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <LinearLayout
+                android:id="@+id/llBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/android:colorBackground"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:visibility="visible">
+
+                <!-- YouTube Logo -->
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_youtube_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/svSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:iconifiedByDefault="false"
+                    android:queryHint="@string/search"
+                    android:singleLine="true"
+                    android:textColor="?attr/colorOnBackground"
+                    android:textColorHint="?attr/colorOnBackground" />
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- RecyclerView for displaying the list of videos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B0FAB5B5"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_profile_pic"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:contentDescription="@string/profile"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_pic"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescription"
+                app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerFamily.Circular" />
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:text="@string/welcome" />
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/android:colorBackground" />
+
+    </LinearLayout>
+
+    <!-- Navigation drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="?attr/android:colorBackground"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        tools:ignore="VisualLintBounds" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

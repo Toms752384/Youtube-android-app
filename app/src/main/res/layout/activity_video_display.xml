@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/android:colorBackground"
-    tools:context=".videoDisplay.VideoDisplayActivity">
+    tools:context=".view.ui.VideoDisplayActivity">
+    <!-- Include the header layout -->
 
     <!-- Video view for playing the video -->
     <VideoView
@@ -91,8 +92,8 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:text="@string/title_video"
-        android:textStyle="bold"
         android:textColor="?attr/colorOnBackground"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tv_like"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,8 +110,7 @@
         android:textColor="?attr/colorOnBackground"
         app:layout_constraintBottom_toTopOf="@+id/llButtons"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_author" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_like"
@@ -122,13 +122,27 @@
         app:layout_constraintEnd_toStartOf="@+id/tv_view"
         app:layout_constraintTop_toTopOf="@+id/tvTitle" />
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/siv_profile_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/profile"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_pic"
+        app:layout_constraintBottom_toTopOf="@+id/tvDescription"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerFamily.Circular" />
+
+
     <TextView
         android:id="@+id/tv_author"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:text="@string/author"
-        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@+id/tvDescription"
+        app:layout_constraintStart_toEndOf="@+id/siv_profile_pic"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <TextView
